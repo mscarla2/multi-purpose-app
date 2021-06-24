@@ -22,11 +22,10 @@ function addNewNote(text = ''){
                 <button class = "delete"><i class="far fa-trash-alt"></i></button>
             </div>
             <div class="main ${text ? '': 'hidden'}"></div>
-        <textarea class = "${text ? 'hidden': ''}"></textarea>
+            <textarea class = "${text ? 'hidden': ''}"></textarea>
         </div>`;
     const editBtn = note.querySelector('.edit');
     const deleteBtn = note.querySelector('.delete');
-    const addBtn = note.querySelector('.add');
         
     const main = note.querySelector('.main');
     const textArea = note.querySelector('textarea');
@@ -52,14 +51,12 @@ function addNewNote(text = ''){
         updateLS();
     });
 
-
-    
     document.body.appendChild(note)
 };
 
 function updateLS() {
     const notesText = document.querySelectorAll('textarea');
-    
+    // const notesTitle = document.querySelector(".title");
     const notes = [];
 
     notesText.forEach(note => {
